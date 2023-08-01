@@ -13,7 +13,8 @@ html, body {
 body {
 	line-height: 1.4;
 	display: flexbox;
-	font-family: 'Source Code Pro', monospace;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #fff;
 	text-align: center;
 }
@@ -21,7 +22,9 @@ body {
     overflow: hidden;
 }
 .content_wrap{
-	padding-top:5%;
+	width: 75%;
+	margin: auto;
+	padding-top: 10%;
 }
 .content{
 	font-size: 1rem;
@@ -148,7 +151,8 @@ body {
 #About{
 	flex-basis: 70%;
 	width: 100%;
-	background-color: #caf0f8;
+	height: 100%;
+	background-color: #212529;
 	color: black;
 	padding: 5% 10% 0 10%;
 }
