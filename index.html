@@ -10,19 +10,20 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="./styles.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script defer src="./app.js"></script>
 </head>
 
 <body>
 	
 	<header>
-		<nav class="navbar navbar-default navbar-expand-sm navbar-dark bg-dark ">
+		<nav class="navbar navbar-default navbar-expand-sm ">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<div class="navbar-nav mx-auto">
-						<a href="#Home" class="nav-item nav-link mx-2 text-light"> Home</a>
-						<a href="#About" class="nav-item nav-link mx-2 text-light"> About</a>
-						<a href="#Skills" class="nav-item nav-link mx-2 text-light"> Skills</a>
-						<a href="#Project" class="nav-item nav-link mx-2 text-light"> Project</a>
+						<a id="#Home" class="nav-item nav-link mx-2"> Home</a>
+						<a id="#About"class="nav-item nav-link mx-2"> About</a>
+						<a id="#Project" class="nav-item nav-link mx-2"> Project</a>
+
 					</div>
 				</div>
 			</div>
@@ -30,22 +31,15 @@
 	</header>
 	
 	<section id ="Home">
-	    <div class="profile__wrap">
-
-		    <img src="./Images/profile.jpg" alt="" class="profile__photo">
-
+	    <div class="profile__wrap d-flex justify-content-center align-items-center">
 		    <div class="profile__info">
-			    <h1>Hello! I'm Richard Andrei B. Suñga</h1>
+			    <h1 class="greetings">Hello! I am Richard</h1>
 			    <p class="profile__intro">
-				    I'm Richard, a student and aspiring <b>Software Developer</b>. <br> I enjoy my time coding and solving <b>pathfinding algorithms</b>. 
+				    I am an aspiring <b >Backend Developer</b>, with a degree on Bachelor of Science and Computer Science.
+					I am hardworking, team-player, and a quick learner. I'm looking for an opportunity to apply my skills on a development team. 
 			    </p>
 			    <div class="profile__contact">
 				    <a href="mailto: rasunga30@gmail.com" class="contact">Get in Touch</a><br>
-					<ul class="social__links">
-						<li><a href="https://www.facebook.com/rasunga30/"target="_blank">Facebook</a></li>
-						<li><a href="https://twitter.com/Chard_530" target="_blank">Twitter</a></li>
-						<li><a href="https://www.instagram.com/chard_530/"target="_blank">Instagram</a></li>
-					</ul>
 			    </div>
 		    </div>
 
@@ -53,69 +47,89 @@
 	</section>
 
 	<section id="About">
-		<div class = "content_wrap">
-			<div class="container about-content">
-				<div class="row">
-					<div class="col align-self-center">
-						<img src="./Images/profile.jpg" alt="" class="profile__photo my-auto">
+		<div class = "container p-5">
+			<div class = "row">
+				<div class = "col-6 px-5">
+					<h3 >About Me</h3>
+					I am a very competitive person and that pushes me to strive at anything that I do to reach my goals. I pushes my limits so that I can exert my full effort on everything that I do.
+					</br></br>
+					When it comes to programming, I try to learnthings that will make my code efficient. I like to search ways to improve the maintainability and overall quality of my code.</br>
+					</br><b >Know more:</b>
+					<div class="mt-3">
+						<a href="/RESUME_SUÑGA,Richard Andrei.pdf" target="_blank" class="contact resume">Resume</a>
+						<a href="https://github.com/Vomerine" target="_blank" class="contact resume">Github</a>
 					</div>
+				</div>
+				<div class = "col-6">
+					<h3 >Skills</h3>
+					<ul>
+						<li> Known programming languages: PHP, C,C++, C#,
+							Java, Python, SQL, HTML, CSS, JavaScript, GDScript and Dart</li>
+						<li> Used different frameworks which includes CodeIgniter 3, Laravel 9, Express(MERN Stack), React Native, Flutter and .NET</li>
+						<li> Familiar in relational database like MySql and non-relational database like Firebase and MongoDB</li>
+						<li> Knowledgeable in tools such as Microsoft Visual Studio Code, XAMPP, Android Studio and source control using Git</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="p-5" id="Project">
 		
-					<div class="col col-xl-4 px-5 content text-white mr-5" >
-							<div class="header text-white">
-							<h1 >About Me</h1>
-							</div>
-							I am a very competitive person and that pushes me to strive at anything that I do to reach my goals. I pushes my limits so that I can exert my full effort on everything that I do.
-							</br></br>
-							I am engaged on cryptocurrency specially on NFT these days. I see them as a window of opportunity and a great potential business with proper knowledge and research.
-							</p>
+		<h1 class="text-center">Projects</h1>
+		<div class="container">
+			<div class="row mb-5 py-5 test">
+				<div class="col-6">
+					<img src="./Images/homescreen.png"/>
+				</div>
+				<div class="col-6 d-flex flex-column">
+					<h3>Ideanaleh</h3>
+					<b class="highlight">Technologies</b>
+					Laravel 9, Blade, JavaScript, Google OAuth, Paypal API, MySQL
+					<p class="mt-2">Ideanaleh is a reward-based crowdfunding web application built on the Laravel framework and SQL database. The platform allows creators to showcase their ideas and receive support from backers in the form of monetary contributions. </p>
+					<p>This collaboration project is for our college thesis. It is only a MVP since it doesn't got approve because of 
+					certain reasons.
+					</p>
+					<div class="mt-2">
+						<a href="https://github.com/0IUwUL/Ideanaleh" class="contact">Source Code</a>
 					</div>
+				</div>
+				
+			</div>
+			<div class="row my-5">
+				<div class="col-6 d-flex flex-column">
+					<h3>Thinklik</h3>
+					<b class="highlight">Technologies</b>
+					CodeIgniter 3, JavaScript, CKEditor, MySQL
+					<p class="mt-2">The web application project “Thinklik” is a forum-based app that features clean functionalities, easy to set up customizable backgrounds, thread and reply creation, and most importantly, the freedom of expression that users get when they create their very first thread</p>
+					<p>This collaboration project is for our Software Development 1 course
+					</p>
+					<div class="mt-2">
+						<a href="https://github.com/Soft-Engr-Project/Team-04" class="contact">Source Code</a>
+					</div>
+					
+				</div>
+				<div class="col-6">
+					<img src="./Images/thinklik.png"/>
 				</div>
 			</div>
-
-		</div>
-	</section>
-
-	<section id="Skills">
-		<div class = "content_wrap">
-
-			<div class = "header">
-				<h1 >Skills</h1>
-			</div>
-
-			<div class="content" >
-				I am proficient in some computer languages like Python, Javascript, Php, C# and specially in C since it is one of computer language I learned.
-				</br>
-				I have an average knowledge about cryptocurrency like trading and mining but I am currently just a holder of some tokens.
-			</div>
-
-		</div>
-	</section>
-
-
-	<section id="Project">
-		<div class = "content_wrap">	
-		<div class="container p-2 my-3">
-			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-				<div class = "header">
-					<h1 >Projects</h1>
+			<div class="row mb-5 py-5">
+				<div class="col-6">
+					<img src="./Images/recommender.png"/>
 				</div>
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>	
-				</div>
-				<div class="carousel-inner center">
-					<div class="carousel-item active">
-						<img src="./Images/ATM.png" style="height:80vh; width:75vw;">
-					</div>
-					<div class="carousel-item">
-						<img src="./Images/bot.png" style="height:80vh; width:75vw;">
-						
-					</div>
-					<div class="carousel-item" >
-						<img src="./Images/Huffman.png" style="height:80vh; width:75vw;">
+				<div class="col-6 d-flex flex-column">
+					<h3>Game Recommender</h3>
+					<b class="highlight">Technologies</b>
+					Python Tkinter, Steam API
+					<p class="mt-2">A desktop application that recommends you games from Steam based on your previous games using the cosine algorithm</p>
+					<p>This collaboration project is for Data Analytics course</p>
+					<div class="mt-2">
+						<a href="https://github.com/Xvareon/DA-Project" class="contact">Source Code</a>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</section>

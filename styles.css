@@ -1,6 +1,5 @@
 html, body {
 	height: 100%;
-	
 }
 
 * {
@@ -9,14 +8,11 @@ html, body {
 	box-sizing: border-box;
 
 }
-
 body {
 	line-height: 1.4;
 	display: flexbox;
 	font-family: 'Open Sans', sans-serif;
 	font-family: 'Roboto', sans-serif;
-	color: #fff;
-	text-align: center;
 }
 .container{
     overflow: hidden;
@@ -24,8 +20,9 @@ body {
 .content_wrap{
 	width: 75%;
 	margin: auto;
-	padding-top: 10%;
+	padding: 5%;
 }
+
 .content{
 	font-size: 1rem;
 	text-align: left;
@@ -34,6 +31,11 @@ body {
 	position:relative;
 	
 }
+
+li{
+	margin-bottom: 1rem;
+}
+
 .header{
 	font-size: 2em;
 	font-weight: 200;
@@ -41,66 +43,65 @@ body {
 }
 /*Navigation Bar*/
 .navbar{
-	z-index: 200;
-	position: fixed;
-    color: #fff;
 	width: 100%;
 	font-size: 1.5em;
 }
 
+.navbar a{
+	color: #46b5ff
+}
+
+a {
+	text-decoration: none;
+	color: #46b5ff;
+}
+
 
 #Home {
-	width: 100%;
+	height: 80%;
 	margin: 0 auto;
+	padding-top: 10%;
 	padding-bottom: 7%;
 	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
-	background: linear-gradient(90deg, rgba(84, 150, 255, .78), rgba(135, 57, 229, .85));
-}
-
-.profile__photo {
-	margin-bottom: 0;
-	height: 240px;
-	width: 240px;
 }
 
 /*Profile*/
 .profile__wrap {
-	text-align: center;
-    padding-top: 10%;
-    position:relative;
-
-}
-
-.profile__photo {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-bottom: 1rem;
-	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
+	height: 100%;
+	
 }
 
 .profile__info h1 {
 	font-size: 2.5em;
-	display: inline-block;
+	width:17ch;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
-	position: relative;
-	color: #f1f5ff;
+	margin: auto;
+}
+
+.greetings {
+	animation: typing 2s steps(19), blink .5s step-end infinite alternate;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid;
+	font-family: monospace;
+	font-size: 2em;
 }
 
 
 .profile__intro {
-	padding: 1rem 10px 1.5rem;
+	width:70%;
+	margin: auto;
+	padding: 1rem 10px;
 	line-height: 1.5;
-	color: #f1f5ff;
 	text-align: center;
 }
 .profile__info {
 	text-align: center;
 	flex-basis: 70%;
+	display: inline-block;
 }
 
 .profile__info p {
@@ -108,19 +109,22 @@ body {
 }
 
 .contact {
-	background-color: #fff;
 	padding: 8px 2rem;
 	text-decoration: none;
-	color: #4a5568;
 	border-radius: 99rem;
-	border: 2px solid #fff;
+	border: 2px solid #46b5ff;
+	background: linear-gradient(to left, white 50%, #46b5ff 50%);
+	background-size: 200% 100%;
+    background-position:right bottom;
+	color: #46b5ff;;
 	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
-	transition: .25s ease;
+	transition: all .25s ease;
+	width: 100%;
 }
 
 .contact:hover {
-	background-color: transparent;
-	color: #fff;
+	background-position: left bottom;
+	color: white
 }
 
 .social__links {
@@ -139,7 +143,6 @@ body {
 
 	align-items: center;
 	font-size: 14px;
-	color: #fff;
 	padding: 0px 5px;
 	text-decoration: none;
 }
@@ -151,19 +154,26 @@ body {
 #About{
 	flex-basis: 70%;
 	width: 100%;
-	height: 100%;
-	background-color: #212529;
-	color: black;
-	padding: 5% 10% 0 10%;
+	background-color: rgb(24, 22, 22);
+	color: white;
 }
 
+.resume {
+	background: linear-gradient(to right, #46b5ff 50%, white 50% );
+	background-size: 200% 100%;
+	color: white;
+	margin-right: 1rem;
+}
+
+.resume:hover {
+	background-position: right bottom;
+	color:#46b5ff;
+}
 
 #Skills{
 	flex-basis: 70%;
 	width: 100%;
 	
-	background-color: #90e0ef;
-	color: black;
 	text-align: center;
 	padding: 3% 10% 0 10%;;
 }
@@ -171,13 +181,67 @@ body {
 #Project{
 	flex-basis: 70%;
 	width: 100%;
-	background-color: #0077b6;
-	color: white;
 	padding-bottom: 5%;
-	
 }
 
+.highlight {
+	color:#46b5ff;
+}
 
+img {
+	width: 500px;
+	height: 600 px;
+	object-fit: cover;
+	transition: scale .2s;
+}
+
+.icon {
+	width: 20px;
+}
+
+h3 {
+	margin: 0;
+}
+
+#Project .container .animate:nth-child(2n) {
+	animation-duration: 2s;
+	animation-name: slideInLeft;
+}
+
+#Project .container .animate:nth-child(2n+1) {
+	animation-duration: 2s;
+	animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes typing {
+	from {
+	  width: 0
+	}
+  }
+	  
+@keyframes blink {
+	50% {
+		border-color: transparent
+	}
+}
 
 @media screen and (max-width:500px){
 	.content{
